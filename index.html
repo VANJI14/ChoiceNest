@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ChoiceNest | Discover. Compare. Choose.</title>
+
+  <meta
+    name="description"
+    content="ChoiceNest - Discover products, compare prices and find the best deals from trusted online stores."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP HEADER
+========================================================= -->
+
+<header class="site-header">
+
+  <div class="header-main">
+
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <span class="logo-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </span>
+
+      <span class="logo-choice">Choice</span><span class="logo-nest">Nest</span>
+    </a>
+
+
+    <!-- SEARCH -->
+    <div class="header-search">
+
+      <input
+        id="headerSearch"
+        type="search"
+        placeholder="Search for products, brands and more..."
+      >
+
+      <button id="headerSearchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+    </div>
+
+
+    <!-- HEADER LINKS -->
+    <nav class="header-links">
+
+      <a href="pages/products.html">
+        Shop
+      </a>
+
+      <a href="#deals">
+        Deals
+      </a>
+
+      <a href="#guides">
+        Guides
+      </a>
+
+    </nav>
+
+
+    <!-- CART -->
+    <a href="pages/cart.html" class="header-icon">
+
+      <i class="fa-solid fa-cart-shopping"></i>
+
+      <span id="cartCount" class="header-badge">
+        0
+      </span>
+
+    </a>
+
+
+    <!-- WISHLIST -->
+    <a href="pages/wishlist.html" class="header-icon">
+
+      <i class="fa-regular fa-heart"></i>
+
+      <span id="wishlistCount" class="header-badge heart-badge">
+        0
+      </span>
+
+    </a>
+
+
+    <!-- ACCOUNT -->
+    <a id="authButton" href="pages/login.html" class="account-button">
+
+      <i class="fa-regular fa-user"></i>
+
+      <span>Account</span>
+
+      <i class="fa-solid fa-chevron-down account-arrow"></i>
+
+    </a>
+
+  </div>
+
+
+  <!-- =====================================================
+       CATEGORY NAVIGATION
+  ====================================================== -->
+
+  <div class="category-navigation">
+
+    <div class="category-navigation-inner">
+
+      <a href="pages/products.html" class="all-category">
+
+        <i class="fa-solid fa-bars"></i>
+
+        <span>All Categories</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+      </a>
+
+
+      <a href="pages/products.html?category=Electronics">
+        <i class="fa-solid fa-laptop"></i>
+        Electronics
+      </a>
+
+      <a href="pages/products.html?category=Fashion">
+        <i class="fa-solid fa-person-dress"></i>
+        Fashion
+      </a>
+
+      <a href="pages/products.html?category=Home">
+        <i class="fa-solid fa-house"></i>
+        Home & Kitchen
+      </a>
+
+      <a href="pages/products.html?category=Beauty">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        Beauty
+      </a>
+
+      <a href="pages/products.html?category=Books">
+        <i class="fa-solid fa-book-open"></i>
+        Books
+      </a>
+
+      <a href="pages/products.html?category=Sports">
+        <i class="fa-solid fa-futbol"></i>
+        Sports
+      </a>
+
+      <a href="pages/products.html?category=Toys">
+        <i class="fa-solid fa-puzzle-piece"></i>
+        Toys
+      </a>
+
+      <a href="pages/products.html?category=Automotive">
+        <i class="fa-solid fa-car"></i>
+        Automotive
+      </a>
+
+      <a href="pages/products.html?category=Gaming">
+        <i class="fa-solid fa-gamepad"></i>
+        Gaming
+      </a>
+
+      <a href="#deals" class="today-deals">
+
+        <i class="fa-solid fa-fire"></i>
+
+        Today's Deals
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <section class="hero-section">
+
+    <div class="hero-slider" id="heroSlider">
+
+
+      <!-- SLIDE 1 -->
+
+      <div class="hero-slide active">
+
+        <div class="hero-content">
+
+          <div class="smart-badge">
+
+            <span>✨</span>
+
+            SMART SHOPPING
+
+          </div>
+
+
+          <h1>
+            Make every choice
+            <br>
+
+            a better
+            <span>choice.</span>
+
+            <span class="sparkle">✦</span>
+
+          </h1>
+
+
+          <p>
+            Discover products, compare prices and find
+            the best deals from trusted online merchants.
+          </p>
+
+
+          <!-- HERO SEARCH -->
+
+          <div class="hero-search">
+
+            <input
+              id="heroSearch"
+              type="search"
+              placeholder="What are you looking for?"
+            >
+
+            <button id="heroSearchBtn">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              Search
+
+            </button>
+
+          </div>
+
+
+          <!-- POPULAR SEARCH -->
+
+          <div class="popular-searches">
+
+            <strong>Popular searches:</strong>
+
+            <button data-search="Smartphones">
+              Smartphones
+            </button>
+
+            <button data-search="Laptops">
+              Laptops
+            </button>
+
+            <button data-search="Headphones">
+              Headphones
+            </button>
+
+            <button data-search="Smart Watches">
+              Smart Watches
+            </button>
+
+            <button data-search="Home Appliances">
+              Home Appliances
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+          <div class="floating-heart floating-one">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="floating-tag floating-two">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+
+
+          <div class="shopping-cart-art">
+
+            <div class="cart-bag bag-yellow"></div>
+            <div class="cart-bag bag-orange"></div>
+            <div class="cart-bag bag-purple"></div>
+
+            <div class="cart-handle"></div>
+
+            <div class="cart-body">
+
+              <div class="cart-item item-one"></div>
+              <div class="cart-item item-two"></div>
+              <div class="cart-item item-three"></div>
+
+            </div>
+
+            <div class="cart-wheel wheel-one"></div>
+            <div class="cart-wheel wheel-two"></div>
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <div class="phone">
+
+            <div class="phone-notch"></div>
+
+            <div class="phone-screen">
+
+              <div class="phone-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search products...
+              </div>
+
+
+              <div class="phone-banner">
+
+                <strong>Big Savings</strong>
+
+                <small>
+                  Up to 60% Off
+                </small>
+
+                <button>
+                  Shop Now
+                </button>
+
+              </div>
+
+
+              <div class="phone-categories">
+
+                <span>
+                  <i class="fa-solid fa-laptop"></i>
+                  Electronics
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-shirt"></i>
+                  Fashion
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-house"></i>
+                  Home
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                  Beauty
+                </span>
+
+              </div>
+
+
+              <div class="phone-heading">
+                Top Deals
+              </div>
+
+
+              <div class="phone-products">
+
+                <div>
+                  <i class="fa-solid fa-headphones"></i>
+                  <strong>₹2,999</strong>
+                  <small>★★★★★</small>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-clock"></i>
+                  <strong>₹1,999</strong>
+                  <small>★★★★★</small>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-shoe-prints"></i>
+                  <strong>₹2,499</strong>
+                  <small>★★★★★</small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="shopping-bags">
+
+            <div class="big-bag orange">
+              <span>CHOICE</span>
+            </div>
+
+            <div class="big-bag pink">
+              <span>NEST</span>
+            </div>
+
+          </div>
+
+
+          <div class="discount-tag">
+            %
+          </div>
+
+
+          <div class="credit-card">
+
+            <div class="chip"></div>
+
+            <span>•••• 1234</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SLIDE 2 -->
+
+      <div class="hero-slide">
+
+        <div class="hero-content">
+
+          <div class="smart-badge">
+            🔥 LIMITED TIME
+          </div>
+
+          <h1>
+            Amazing deals.
+            <br>
+            <span>Smarter shopping.</span>
+          </h1>
+
+          <p>
+            Compare prices from trusted stores and
+            discover products at prices you'll love.
+          </p>
+
+          <div class="hero-search">
+
+            <input
+              type="search"
+              placeholder="Search today's best deals..."
+            >
+
+            <button onclick="goToProducts()">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              Explore
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-deal-visual">
+
+          <div class="deal-circle">
+
+            <span>UP TO</span>
+
+            <strong>60%</strong>
+
+            <span>OFF</span>
+
+          </div>
+
+          <div class="deal-products">
+
+            <div>🎧</div>
+            <div>⌚</div>
+            <div>👟</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SLIDE 3 -->
+
+      <div class="hero-slide">
+
+        <div class="hero-content">
+
+          <div class="smart-badge">
+            💜 CHOICENEST PICKS
+          </div>
+
+          <h1>
+            Find products
+            <br>
+            <span>you'll love.</span>
+          </h1>
+
+          <p>
+            Browse thousands of products and make
+            confident buying decisions.
+          </p>
+
+          <button
+            class="hero-main-button"
+            onclick="goToProducts()"
+          >
+            Start Shopping
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </div>
+
+        <div class="hero-picks">
+
+          <div class="pick-card">
+            <span>🎧</span>
+            <strong>Audio</strong>
+          </div>
+
+          <div class="pick-card">
+            <span>📱</span>
+            <strong>Phones</strong>
+          </div>
+
+          <div class="pick-card">
+            <span>👟</span>
+            <strong>Fashion</strong>
+          </div>
+
+          <div class="pick-card">
+            <span>🏠</span>
+            <strong>Home</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SLIDER BUTTONS -->
+
+      <button class="hero-arrow hero-prev" id="heroPrev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <button class="hero-arrow hero-next" id="heroNext">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+
+      <!-- DOTS -->
+
+      <div class="hero-dots">
+
+        <button class="hero-dot active" data-slide="0"></button>
+
+        <button class="hero-dot" data-slide="1"></button>
+
+        <button class="hero-dot" data-slide="2"></button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       TRUST FEATURES
+  ======================================================== -->
+
+  <section class="trust-section">
+
+    <div class="trust-item">
+
+      <div class="trust-icon blue">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+
+      <div>
+        <h3>Trusted & Secure</h3>
+
+        <p>
+          Shop with confidence from
+          trusted stores
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="trust-divider"></div>
+
+
+    <div class="trust-item">
+
+      <div class="trust-icon red">
+        <i class="fa-solid fa-tag"></i>
+      </div>
+
+      <div>
+        <h3>Best Prices</h3>
+
+        <p>
+          Compare prices and find
+          the best deals
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="trust-divider"></div>
+
+
+    <div class="trust-item">
+
+      <div class="trust-icon yellow">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+
+      <div>
+        <h3>Quick & Easy</h3>
+
+        <p>
+          Fast search and easy
+          product discovery
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="trust-divider"></div>
+
+
+    <div class="trust-item">
+
+      <div class="trust-icon green">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+
+      <div>
+        <h3>24/7 Support</h3>
+
+        <p>
+          We're here to help you
+          anytime
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       POPULAR CATEGORIES
+  ======================================================== -->
+
+  <section class="section categories-section" id="categories">
+
+    <div class="section-header">
+
+      <div>
+
+        <h2>Popular Categories</h2>
+
+      </div>
+
+      <a href="pages/products.html">
+        View all categories
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="category-slider">
+
+      <button
+        class="category-scroll category-left"
+        onclick="scrollCategories(-1)"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+
+      <div class="categories-wrapper" id="categoriesWrapper">
+
+
+        <button
+          class="category-card"
+          data-category="Electronics"
+        >
+
+          <div class="category-image electronics-image">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <i class="fa-solid fa-headphones category-small-icon"></i>
+
+          </div>
+
+          <strong>Electronics</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Fashion"
+        >
+
+          <div class="category-image fashion-image">
+
+            <i class="fa-solid fa-shirt"></i>
+
+          </div>
+
+          <strong>Fashion</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Home"
+        >
+
+          <div class="category-image home-image">
+
+            <i class="fa-solid fa-couch"></i>
+
+          </div>
+
+          <strong>Home & Kitchen</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Beauty"
+        >
+
+          <div class="category-image beauty-image">
+
+            <i class="fa-solid fa-lipstick"></i>
+
+          </div>
+
+          <strong>Beauty</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Books"
+        >
+
+          <div class="category-image books-image">
+
+            <i class="fa-solid fa-book-open"></i>
+
+          </div>
+
+          <strong>Books</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Sports"
+        >
+
+          <div class="category-image sports-image">
+
+            <i class="fa-solid fa-futbol"></i>
+
+          </div>
+
+          <strong>Sports</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Toys"
+        >
+
+          <div class="category-image toys-image">
+
+            <i class="fa-solid fa-puzzle-piece"></i>
+
+          </div>
+
+          <strong>Toys</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Automotive"
+        >
+
+          <div class="category-image auto-image">
+
+            <i class="fa-solid fa-car"></i>
+
+          </div>
+
+          <strong>Automotive</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Gaming"
+        >
+
+          <div class="category-image gaming-image">
+
+            <i class="fa-solid fa-gamepad"></i>
+
+          </div>
+
+          <strong>Gaming</strong>
+
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="Accessories"
+        >
+
+          <div class="category-image accessories-image">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+          </div>
+
+          <strong>Accessories</strong>
+
+        </button>
+
+
+      </div>
+
+
+      <button
+        class="category-scroll category-right"
+        onclick="scrollCategories(1)"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       DEAL / BRAND / PRICE DROP
+  ======================================================== -->
+
+  <section class="quick-deals" id="deals">
+
+    <!-- DEAL OF DAY -->
+
+    <div class="quick-card deal-day">
+
+      <div class="quick-title">
+
+        <span class="quick-icon orange-icon">
+          <i class="fa-solid fa-stopwatch"></i>
+        </span>
+
+        <div>
+          <strong>Deal of the Day</strong>
+          <small>Limited time offer</small>
+        </div>
+
+      </div>
+
+
+      <div class="countdown">
+
+        <div>
+          <strong id="dealHours">08</strong>
+          <small>HRS</small>
+        </div>
+
+        <span>:</span>
+
+        <div>
+          <strong id="dealMinutes">45</strong>
+          <small>MINS</small>
+        </div>
+
+        <span>:</span>
+
+        <div>
+          <strong id="dealSeconds">32</strong>
+          <small>SECS</small>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- TOP BRANDS -->
+
+    <div class="quick-card top-brands">
+
+      <div class="quick-title">
+
+        <span class="quick-icon green-icon">
+          <i class="fa-solid fa-store"></i>
+        </span>
+
+        <div>
+          <strong>Top Brands</strong>
+          <small>Shop from trusted brands</small>
+        </div>
+
+      </div>
+
+
+      <div class="brand-logos">
+
+        <span></span>
+        <span class="samsung">SAMSUNG</span>
+        <span class="boat">boAt</span>
+        <span class="nike">NIKE</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRICE DROP -->
+
+    <div class="quick-card price-drop">
+
+      <div class="quick-title">
+
+        <span class="quick-icon purple-icon">
+          <i class="fa-solid fa-tags"></i>
+        </span>
+
+        <div>
+          <strong>Price Drop</strong>
+          <small>Biggest discounts on top products</small>
+        </div>
+
+      </div>
+
+
+      <div class="price-drop-product">
+
+        <div class="mini-product">
+          <i class="fa-solid fa-headphones"></i>
+        </div>
+
+        <div>
+          <strong>Up to 50% OFF</strong>
+          <small>View deals</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FEATURED PRODUCTS
+  ======================================================== -->
+
+  <section class="section featured-section">
+
+    <div class="section-header">
+
+      <div>
+
+        <p class="section-label">
+          CURATED FOR YOU
+        </p>
+
+        <h2>Featured Products</h2>
+
+      </div>
+
+      <a href="pages/products.html">
+        See all
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div
+      id="featuredProducts"
+      class="product-grid"
+    ></div>
+
+  </section>
+
+
+  <!-- =======================================================
+       GUIDES
+  ======================================================== -->
+
+  <section class="guides-section" id="guides">
+
+    <div class="section-header">
+
+      <div>
+
+        <p class="section-label">
+          SHOP SMARTER
+        </p>
+
+        <h2>Buying Guides</h2>
+
+      </div>
+
+      <a href="#">
+        View all
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="guides-grid">
+
+      <article class="guide-card">
+
+        <div class="guide-icon">
+          📱
+        </div>
+
+        <div>
+
+          <span>Electronics</span>
+
+          <h3>
+            How to choose the right smartphone
+          </h3>
+
+          <a href="pages/guides.html?guide=smartphone">
+    Read guide →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="guide-card">
+
+        <div class="guide-icon">
+          💻
+        </div>
+
+        <div>
+
+          <span>Technology</span>
+
+          <h3>
+            Laptop buying guide for students
+          </h3>
+
+          <a href="pages/guides.html?guide=laptop">
+    Read guide →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="guide-card">
+
+        <div class="guide-icon">
+          🎧
+        </div>
+
+        <div>
+
+          <span>Audio</span>
+
+          <h3>
+            Best headphones for every budget
+          </h3>
+
+          <a href="pages/guides.html?guide=headphones">
+    Read guide →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FLOATING CHAT
+========================================================= -->
+
+<button class="chat-button" id="chatButton">
+
+  <i class="fa-solid fa-comment-dots"></i>
+
+</button>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-container">
+
+
+    <div class="footer-brand">
+
+      <a href="index.html" class="logo footer-logo">
+
+        <span class="logo-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+
+        <span class="logo-choice">Choice</span><span class="logo-nest">Nest</span>
+
+      </a>
+
+      <p>
+        Discover better products.
+        Compare smarter.
+        Choose with confidence.
+      </p>
+
+
+      <div class="social-links">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h4>Explore</h4>
+
+      <a href="pages/products.html">
+        Products
+      </a>
+
+      <a href="#categories">
+        Categories
+      </a>
+
+      <a href="#deals">
+        Deals
+      </a>
+
+      <a href="#guides">
+        Buying Guides
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <h4>Customer</h4>
+
+      <a href="pages/wishlist.html">
+        Wishlist
+      </a>
+
+      <a href="pages/cart.html">
+        Cart
+      </a>
+
+      <a href="pages/profile.html">
+        My Account
+      </a>
+
+      <a href="#">
+        Help Center
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <h4>ChoiceNest</h4>
+
+      <a href="#">
+        About Us
+      </a>
+
+      <a href="#">
+        Contact
+      </a>
+
+      <a href="#">
+        Privacy Policy
+      </a>
+
+      <a href="#">
+        Terms & Conditions
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 ChoiceNest. All rights reserved.
+    </p>
+
+    <p>
+      Discover. Compare. Choose.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

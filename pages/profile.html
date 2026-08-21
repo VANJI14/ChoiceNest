@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | ChoiceNest</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css">
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(108, 77, 246, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(255, 140, 180, 0.10),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f8f6ff 50%,
+                    #f3f0ff 100%
+                );
+
+            color: #171426;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+
+            min-height: 78px;
+
+            padding: 14px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid #e9e3f5;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .site-header .logo {
+
+            text-decoration: none;
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+
+            color: #171426;
+
+            white-space: nowrap;
+        }
+
+        .site-header .logo span {
+
+            color: #6c3cff;
+        }
+
+
+        /* =====================================================
+           NAVIGATION BUTTONS
+        ===================================================== */
+
+        .main-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .main-nav a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 42px;
+
+            padding: 10px 17px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            color: #555064;
+
+            background: rgba(255, 255, 255, 0.85);
+
+            border: 1px solid #e3dff0;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        /* =====================================================
+           NAV HOVER
+        ===================================================== */
+
+        .main-nav a:hover {
+
+            background: #f0eaff;
+
+            color: #6337e8;
+
+            border-color: #cfc1f7;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 7px 18px
+                rgba(108, 77, 246, 0.12);
+        }
+
+
+        /* =====================================================
+           ACTIVE PROFILE BUTTON
+        ===================================================== */
+
+        .main-nav a.active {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3df5,
+                    #8b5cf6
+                );
+
+            border-color: transparent;
+
+            box-shadow:
+                0 8px 20px
+                rgba(108, 61, 245, 0.25);
+        }
+
+
+        .main-nav a.active:hover {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #5d2de0,
+                    #7c45f5
+                );
+
+            border-color: transparent;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 24px
+                rgba(108, 61, 245, 0.30);
+        }
+
+
+        /* =====================================================
+           WISHLIST BADGE
+        ===================================================== */
+
+        .badge {
+
+            min-width: 20px;
+
+            height: 20px;
+
+            margin-left: 6px;
+
+            padding: 0 5px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50px;
+
+            background: #ff4d78;
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           HEADER LOGIN BUTTON
+        ===================================================== */
+
+        .header-actions {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .header-actions .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 11px 20px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+
+        .header-actions .btn-primary {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3df5,
+                    #8b5cf6
+                );
+
+            border: 1px solid transparent;
+
+            box-shadow:
+                0 10px 22px
+                rgba(108, 61, 245, 0.25);
+        }
+
+
+        .header-actions .btn-primary:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(108, 61, 245, 0.32);
+        }
+
+
+        /* =====================================================
+           COMMON BUTTON
+        ===================================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 11px 20px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+
+        .btn-primary {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3df5,
+                    #8b5cf6
+                );
+
+            border: none;
+
+            box-shadow:
+                0 10px 22px
+                rgba(108, 61, 245, 0.25);
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(108, 61, 245, 0.32);
+        }
+
+
+        /* =====================================================
+           PROFILE PAGE
+        ===================================================== */
+
+        .profile-page {
+
+            min-height:
+                calc(100vh - 78px);
+
+            padding:
+                60px 6%;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           BACKGROUND BLOBS
+        ===================================================== */
+
+        .profile-page::before,
+        .profile-page::after {
+
+            content: "";
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(5px);
+
+            z-index: 0;
+
+            animation:
+                floatBlob 8s ease-in-out infinite;
+        }
+
+
+        .profile-page::before {
+
+            width: 300px;
+
+            height: 300px;
+
+            background:
+                rgba(108, 77, 246, 0.15);
+
+            top: 30px;
+
+            left: -100px;
+        }
+
+
+        .profile-page::after {
+
+            width: 350px;
+
+            height: 350px;
+
+            background:
+                rgba(255, 140, 180, 0.18);
+
+            bottom: -100px;
+
+            right: -100px;
+
+            animation-delay: 2s;
+        }
+
+
+        @keyframes floatBlob {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    translateX(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-25px)
+                    translateX(15px);
+            }
+        }
+
+
+        /* =====================================================
+           PROFILE CONTAINER
+        ===================================================== */
+
+        .profile-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           PROFILE HEADING
+        ===================================================== */
+
+        .profile-heading {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+            animation:
+                fadeDown 0.8s ease;
+        }
+
+
+        .profile-heading .eyebrow {
+
+            color: #6c4df6;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .profile-heading h1 {
+
+            font-size: 46px;
+
+            color: #171526;
+
+            margin:
+                0 0 10px;
+        }
+
+
+        .profile-heading p {
+
+            color: #716e80;
+
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           MAIN PROFILE GRID
+        ===================================================== */
+
+        .profile-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                330px 1fr;
+
+            gap: 25px;
+        }
+
+
+        /* =====================================================
+           LEFT PROFILE CARD
+        ===================================================== */
+
+        .profile-sidebar {
+
+            background:
+                rgba(255, 255, 255, 0.75);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border:
+                1px solid rgba(255,255,255,0.9);
+
+            border-radius: 30px;
+
+            padding:
+                35px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 25px 70px
+                rgba(76,49,160,0.12);
+
+            animation:
+                fadeLeft 0.8s ease;
+        }
+
+
+        /* =====================================================
+           AVATAR
+        ===================================================== */
+
+        .avatar {
+
+            width: 115px;
+
+            height: 115px;
+
+            margin:
+                0 auto 18px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff9fb5,
+                    #9c7bff
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 48px;
+
+            color: white;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 12px 30px
+                rgba(108,77,246,0.25);
+
+            animation:
+                avatarFloat 4s ease-in-out infinite;
+        }
+
+
+        @keyframes avatarFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+
+        .profile-sidebar h2 {
+
+            font-size: 25px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .profile-sidebar .email {
+
+            color: #716e80;
+
+            font-size: 14px;
+
+            word-break: break-word;
+        }
+
+
+        .member-badge {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding:
+                7px 15px;
+
+            border-radius: 30px;
+
+            background: #eee9ff;
+
+            color: #6c4df6;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PROFILE STATS
+        ===================================================== */
+
+        .profile-stats {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        .stat-box {
+
+            padding:
+                18px 10px;
+
+            border-radius: 18px;
+
+            background:
+                rgba(248,246,255,0.9);
+
+            border:
+                1px solid #ebe7fa;
+
+            transition: 0.3s;
+        }
+
+
+        .stat-box:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(108,77,246,0.12);
+        }
+
+
+        .stat-box strong {
+
+            display: block;
+
+            color: #6c4df6;
+
+            font-size: 25px;
+        }
+
+
+        .stat-box span {
+
+            color: #716e80;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RIGHT CONTENT
+        ===================================================== */
+
+        .profile-content {
+
+            display: grid;
+
+            gap: 20px;
+
+            animation:
+                fadeRight 0.8s ease;
+        }
+
+
+        .profile-card-new {
+
+            background:
+                rgba(255,255,255,0.78);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border:
+                1px solid rgba(255,255,255,0.9);
+
+            border-radius: 25px;
+
+            padding: 28px;
+
+            box-shadow:
+                0 20px 60px
+                rgba(76,49,160,0.10);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .profile-card-new:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 25px 65px
+                rgba(76,49,160,0.14);
+        }
+
+
+        /* =====================================================
+           CARD TITLE
+        ===================================================== */
+
+        .card-title {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .card-title h3 {
+
+            font-size: 21px;
+
+            margin: 0;
+        }
+
+
+        .card-title span {
+
+            font-size: 24px;
+        }
+
+
+        /* =====================================================
+           INFORMATION ROWS
+        ===================================================== */
+
+        .info-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 17px 0;
+
+            border-bottom:
+                1px solid #eeeaf5;
+        }
+
+
+        .info-row:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .info-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 14px;
+
+            background: #f0ebff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+        }
+
+
+        .info-text {
+
+            flex: 1;
+        }
+
+
+        .info-text small {
+
+            display: block;
+
+            color: #9995a8;
+
+            font-size: 12px;
+
+            margin-bottom: 3px;
+        }
+
+
+        .info-text strong {
+
+            font-size: 15px;
+
+            word-break: break-word;
+        }
+
+
+        /* =====================================================
+           QUICK ACTIONS
+        ===================================================== */
+
+        .quick-actions {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .action-btn {
+
+            border:
+                1px solid #ebe7f4;
+
+            background: white;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            color: #171526;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .action-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #6c4df6;
+
+            color:
+                #6c4df6;
+
+            background:
+                #faf8ff;
+
+            box-shadow:
+                0 10px 25px
+                rgba(108,77,246,0.10);
+        }
+
+
+        /* =====================================================
+           LOGOUT
+        ===================================================== */
+
+        .logout-btn {
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            padding: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff8fa8,
+                    #8b6df6
+                );
+
+            color: white;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .logout-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(108,77,246,0.22);
+        }
+
+
+        /* =====================================================
+           NOT LOGGED IN
+        ===================================================== */
+
+        .not-logged {
+
+            max-width: 550px;
+
+            margin: 80px auto;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,0.85);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-radius: 30px;
+
+            padding:
+                50px 30px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(76,49,160,0.12);
+        }
+
+
+        .not-logged-icon {
+
+            font-size: 70px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .not-logged h2 {
+
+            margin-bottom: 10px;
+        }
+
+
+        .not-logged p {
+
+            color: #716e80;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding:
+                55px 6%;
+
+            background: #171426;
+
+            color: #d9d5e7;
+        }
+
+
+        footer .logo {
+
+            color: white;
+        }
+
+
+        footer p {
+
+            color: #aaa4bb;
+
+            line-height: 1.6;
+        }
+
+
+        footer h4 {
+
+            margin-top: 0;
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+
+        footer a:not(.logo) {
+
+            display: block;
+
+            margin: 10px 0;
+
+            color: #aaa4bb;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+
+        footer a:not(.logo):hover {
+
+            color: #9d7cff;
+
+            transform:
+                translateX(3px);
+        }
+
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        @keyframes fadeLeft {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateX(0);
+            }
+        }
+
+
+        @keyframes fadeRight {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateX(0);
+            }
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .site-header {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .site-header .logo {
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            .main-nav {
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+
+            .profile-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .profile-sidebar {
+
+                max-width: 550px;
+
+                width: 100%;
+
+                margin: auto;
+            }
+
+
+            .profile-heading h1 {
+
+                font-size: 38px;
+            }
+
+
+            footer {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 550px) {
+
+            .site-header {
+
+                padding:
+                    12px 4%;
+            }
+
+
+            .main-nav {
+
+                width: 100%;
+
+                justify-content: center;
+
+                gap: 6px;
+            }
+
+
+            .main-nav a {
+
+                padding:
+                    9px 11px;
+
+                font-size: 13px;
+
+                min-height: 40px;
+            }
+
+
+            .header-actions {
+
+                width: 100%;
+
+                justify-content: center;
+            }
+
+
+            .profile-page {
+
+                padding:
+                    40px 5%;
+            }
+
+
+            .profile-heading h1 {
+
+                font-size: 32px;
+            }
+
+
+            .profile-card-new {
+
+                padding: 20px;
+            }
+
+
+            .quick-actions {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            footer {
+
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+
+    <!-- LOGO -->
+
+    <a
+        class="logo"
+        href="../index.html">
+
+        🛍️ Choice<span>Nest</span>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+
+        <a
+            href="../index.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a
+            href="products.html">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a
+            href="wishlist.html">
+
+            ❤️ Wishlist
+
+            <span
+                id="wishlistCount"
+                class="badge">
+
+                0
+
+            </span>
+
+        </a>
+
+
+        <a
+            href="profile.html"
+            class="active">
+
+            👤 Profile
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- LOGIN -->
+
+    <div class="header-actions">
+
+        <a
+            id="authButton"
+            class="btn btn-primary"
+            href="login.html">
+
+            Login
+
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     PROFILE
+===================================================== -->
+
+<main class="profile-page">
+
+
+    <div class="profile-container">
+
+
+        <!-- HEADING -->
+
+        <div class="profile-heading">
+
+            <p class="eyebrow">
+
+                MY CHOICENEST
+
+            </p>
+
+
+            <h1>
+
+                My Profile ✨
+
+            </h1>
+
+
+            <p>
+
+                Manage your account and shopping activity.
+
+            </p>
+
+        </div>
+
+
+        <!-- PROFILE AREA -->
+
+        <div id="profileArea"></div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <!-- BRAND -->
+
+    <div>
+
+        <a
+            class="logo"
+            href="../index.html">
+
+            🛍️ Choice<span>Nest</span>
+
+        </a>
+
+
+        <p>
+
+            Your personal product discovery space.
+
+        </p>
+
+    </div>
+
+
+    <!-- EXPLORE -->
+
+    <div>
+
+        <h4>
+            Explore
+        </h4>
+
+
+        <a href="../index.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a href="products.html">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a href="wishlist.html">
+
+            ❤️ Wishlist
+
+        </a>
+
+    </div>
+
+
+    <!-- ACCOUNT -->
+
+    <div>
+
+        <h4>
+            Account
+        </h4>
+
+
+        <a href="login.html">
+
+            🔐 Login
+
+        </a>
+
+
+        <a href="register.html">
+
+            ✨ Register
+
+        </a>
+
+
+        <a href="profile.html">
+
+            👤 Profile
+
+        </a>
+
+    </div>
+
+
+    <!-- CHOICENEST -->
+
+    <div>
+
+        <h4>
+            ChoiceNest
+        </h4>
+
+
+        <p>
+
+            Discover better.
+            Choose smarter.
+
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     APP JS
+===================================================== -->
+
+<script src="../js/app.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+
+        const area =
+            document.getElementById(
+                "profileArea"
+            );
+
+
+        /* =================================================
+           GET CURRENT USER
+        ================================================= */
+
+        const user =
+            typeof currentUser === "function"
+                ? currentUser()
+                : null;
+
+
+        /* =================================================
+           NOT LOGGED IN
+        ================================================= */
+
+        if (!user) {
+
+            area.innerHTML = `
+
+                <div class="not-logged">
+
+                    <div class="not-logged-icon">
+                        🔐
+                    </div>
+
+
+                    <h2>
+                        Welcome to ChoiceNest
+                    </h2>
+
+
+                    <p>
+
+                        Please login to view
+                        your profile, wishlist
+                        and shopping activity.
+
+                    </p>
+
+
+                    <a
+                        href="login.html"
+                        class="btn btn-primary">
+
+                        Login to Continue →
+
+                    </a>
+
+
+                    <p
+                        style="
+                            margin-top:20px;
+                            margin-bottom:0;
+                        ">
+
+                        Don't have an account?
+
+                        <a
+                            href="register.html"
+                            style="
+                                color:#6c4df6;
+                                font-weight:800;
+                            ">
+
+                            Create one
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        /* =================================================
+           USER DATA
+        ================================================= */
+
+        const wishlist =
+            typeof getWishlist === "function"
+                ? getWishlist()
+                : [];
+
+
+        const recent =
+            JSON.parse(
+                localStorage.getItem(
+                    "cn_recent"
+                ) || "[]"
+            );
+
+
+        /* =================================================
+           AVATAR
+        ================================================= */
+
+        const firstLetter =
+            user.name
+                ? user.name
+                    .charAt(0)
+                    .toUpperCase()
+                : "U";
+
+
+        /* =================================================
+           PROFILE UI
+        ================================================= */
+
+        area.innerHTML = `
+
+            <div class="profile-grid">
+
+
+                <!-- =====================================
+                     LEFT SIDEBAR
+                ====================================== -->
+
+                <aside class="profile-sidebar">
+
+
+                    <div class="avatar">
+
+                        ${firstLetter}
+
+                    </div>
+
+
+                    <h2>
+
+                        ${user.name || "User"}
+
+                    </h2>
+
+
+                    <div class="email">
+
+                        ${user.email || ""}
+
+                    </div>
+
+
+                    <div class="member-badge">
+
+                        ✨ ChoiceNest Member
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="profile-stats">
+
+
+                        <div class="stat-box">
+
+                            <strong>
+
+                                ${wishlist.length}
+
+                            </strong>
+
+                            <span>
+
+                                Wishlist
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <strong>
+
+                                ${recent.length}
+
+                            </strong>
+
+                            <span>
+
+                                Recently Viewed
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- LOGOUT -->
+
+                    <button
+                        id="logoutBtn"
+                        class="logout-btn">
+
+                        🚪 Logout
+
+                    </button>
+
+
+                </aside>
+
+
+
+                <!-- =====================================
+                     RIGHT CONTENT
+                ====================================== -->
+
+                <section class="profile-content">
+
+
+                    <!-- ACCOUNT INFORMATION -->
+
+                    <div class="profile-card-new">
+
+
+                        <div class="card-title">
+
+                            <h3>
+
+                                Account Information
+
+                            </h3>
+
+                            <span>
+                                👤
+                            </span>
+
+                        </div>
+
+
+                        <!-- NAME -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                👤
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    Full Name
+                                </small>
+
+                                <strong>
+
+                                    ${user.name || "Not available"}
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                📧
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    Email Address
+                                </small>
+
+                                <strong>
+
+                                    ${user.email || "Not available"}
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- USER ID -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                🆔
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    User ID
+                                </small>
+
+                                <strong>
+
+                                    ${user.id || "Not available"}
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MEMBER SINCE -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                📅
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    Member Since
+                                </small>
+
+                                <strong>
+
+                                    ${
+                                        user.createdAt
+                                            ? new Date(
+                                                user.createdAt
+                                            ).toLocaleDateString(
+                                                "en-IN",
+                                                {
+                                                    day: "2-digit",
+                                                    month: "long",
+                                                    year: "numeric"
+                                                }
+                                            )
+                                            : "ChoiceNest Member"
+                                    }
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SHOPPING ACTIVITY
+                    ================================== -->
+
+                    <div class="profile-card-new">
+
+
+                        <div class="card-title">
+
+                            <h3>
+
+                                Shopping Activity
+
+                            </h3>
+
+                            <span>
+                                🛍️
+                            </span>
+
+                        </div>
+
+
+                        <!-- WISHLIST -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                ❤️
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    Saved Products
+                                </small>
+
+                                <strong>
+
+                                    ${wishlist.length}
+                                    products
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- RECENT -->
+
+                        <div class="info-row">
+
+                            <div class="info-icon">
+                                👀
+                            </div>
+
+
+                            <div class="info-text">
+
+                                <small>
+                                    Recently Viewed
+                                </small>
+
+                                <strong>
+
+                                    ${recent.length}
+                                    products
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         QUICK ACTIONS
+                    ================================== -->
+
+                    <div class="profile-card-new">
+
+
+                        <div class="card-title">
+
+                            <h3>
+
+                                Quick Actions
+
+                            </h3>
+
+                            <span>
+                                ⚡
+                            </span>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+
+                            <a
+                                href="wishlist.html"
+                                class="action-btn">
+
+                                ❤️
+
+                                My Wishlist
+
+                            </a>
+
+
+                            <a
+                                href="products.html"
+                                class="action-btn">
+
+                                🛍️
+
+                                Browse Products
+
+                            </a>
+
+
+                            <a
+                                href="../index.html"
+                                class="action-btn">
+
+                                🏠
+
+                                Home
+
+                            </a>
+
+
+                            <a
+                                href="products.html"
+                                class="action-btn">
+
+                                🔎
+
+                                Discover Deals
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+            </div>
+
+        `;
+
+
+        /* =================================================
+           LOGOUT
+        ================================================= */
+
+        const logoutBtn =
+            document.getElementById(
+                "logoutBtn"
+            );
+
+
+        if (logoutBtn) {
+
+            logoutBtn.addEventListener(
+                "click",
+                () => {
+
+                    localStorage.removeItem(
+                        "cn_user"
+                    );
+
+                    localStorage.removeItem(
+                        "cn_logged_in"
+                    );
+
+                    window.location.href =
+                        "../index.html";
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           UPDATE HEADER
+        ================================================= */
+
+        if (
+            typeof updateHeader ===
+            "function"
+        ) {
+
+            updateHeader();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

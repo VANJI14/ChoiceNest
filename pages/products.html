@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | ChoiceNest</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* =========================================
+           CHOICENEST PRODUCTS PAGE
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background:
+                radial-gradient(circle at 90% 15%,
+                    rgba(124, 77, 255, 0.14),
+                    transparent 28%),
+                linear-gradient(135deg,
+                    #faf8ff 0%,
+                    #f5f0ff 45%,
+                    #ffffff 100%);
+            color: #171426;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .site-header {
+            min-height: 78px;
+            padding: 14px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid #e9e3f5;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: #171426;
+
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #6c3cff;
+        }
+
+
+        /* =========================================
+           NAVIGATION BUTTONS
+        ========================================= */
+
+        .main-nav,
+        .site-header nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .main-nav a,
+        .site-header nav a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 42px;
+            padding: 10px 17px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+            color: #555064;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            border: 1px solid transparent;
+
+            transition:
+                0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        /* HOVER */
+
+        .main-nav a:hover,
+        .site-header nav a:hover {
+            background: #f0eaff;
+            color: #6337e8;
+            border-color: #e0d5ff;
+            transform: translateY(-2px);
+        }
+
+
+        /* ACTIVE BUTTON */
+
+        .main-nav a.active,
+        .site-header nav a.active {
+            color: white;
+            background: linear-gradient(
+                135deg,
+                #6d3df5,
+                #8b5cf6
+            );
+
+            box-shadow:
+                0 8px 20px rgba(108, 61, 245, 0.25);
+        }
+
+        .main-nav a.active:hover,
+        .site-header nav a.active:hover {
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #5d2de0,
+                #7c45f5
+            );
+
+            transform: translateY(-2px);
+        }
+
+
+        /* WISHLIST BADGE */
+
+        .badge {
+            min-width: 20px;
+            height: 20px;
+
+            margin-left: 6px;
+
+            padding: 0 5px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50px;
+
+            background: #ff4d78;
+            color: white;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           LOGIN BUTTON
+        ========================================= */
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 11px 20px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            border: none;
+
+            transition: 0.25s ease;
+        }
+
+
+        .btn-primary {
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #6d3df5,
+                #8b5cf6
+            );
+
+            box-shadow:
+                0 10px 22px rgba(108, 61, 245, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 28px rgba(108, 61, 245, 0.32);
+        }
+
+
+        .btn-outline {
+            background: white;
+            color: #6337e8;
+
+            border: 1px solid #dcd2f7;
+        }
+
+        .btn-outline:hover {
+            background: #f4efff;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           PAGE
+        ========================================= */
+
+        .page {
+            width: min(1380px, 92%);
+            margin: auto;
+
+            padding: 65px 0 80px;
+        }
+
+
+        /* =========================================
+           PAGE TITLE
+        ========================================= */
+
+        .page-title {
+            position: relative;
+
+            padding: 25px 0 35px;
+        }
+
+
+        .eyebrow {
+            margin: 0 0 12px;
+
+            color: #7044ef;
+
+            font-size: 15px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .page-title h1 {
+            margin: 0;
+
+            font-size: clamp(42px, 5vw, 66px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            font-weight: 900;
+        }
+
+
+        .page-title h1::first-line {
+            color: #171426;
+        }
+
+
+        .hero-text {
+            margin-top: 22px;
+
+            color: #716e80;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           SEARCH TOOLBAR
+        ========================================= */
+
+        .toolbar {
+            display: grid;
+
+            grid-template-columns: 1fr 280px;
+
+            gap: 18px;
+
+            padding: 20px;
+
+            margin: 20px 0 45px;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            border: 1px solid #ebe4f7;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 15px 45px rgba(76, 53, 130, 0.08);
+
+            backdrop-filter: blur(15px);
+        }
+
+
+        .toolbar input,
+        .toolbar select {
+            width: 100%;
+
+            height: 60px;
+
+            padding: 0 20px;
+
+            border-radius: 15px;
+
+            border: 1px solid #e2dcef;
+
+            background: white;
+
+            color: #252035;
+
+            font-size: 16px;
+
+            outline: none;
+
+            transition: 0.25s ease;
+        }
+
+
+        .toolbar input::placeholder {
+            color: #8a8498;
+        }
+
+
+        .toolbar input:focus,
+        .toolbar select:focus {
+            border-color: #8a5cf6;
+
+            box-shadow:
+                0 0 0 4px rgba(124, 77, 255, 0.10);
+        }
+
+
+        /* =========================================
+           PRODUCT GRID
+        ========================================= */
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        /* =========================================
+           PRODUCT CARD
+        ========================================= */
+
+        .product-card {
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid #ebe5f5;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 12px 35px rgba(50, 35, 90, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .product-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 22px 50px rgba(73, 47, 130, 0.15);
+        }
+
+
+        .product-card img {
+            width: 100%;
+
+            height: 245px;
+
+            object-fit: contain;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8f5ff,
+                    #eee9fa
+                );
+
+            padding: 25px;
+        }
+
+
+        .product-card-content {
+            padding: 20px;
+        }
+
+
+        .product-card h3 {
+            margin: 8px 0;
+
+            font-size: 20px;
+        }
+
+
+        .product-card p {
+            color: #716e80;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           EMPTY
+        ========================================= */
+
+        .empty {
+            padding: 70px 30px;
+
+            text-align: center;
+
+            background: white;
+
+            border-radius: 22px;
+
+            border: 1px solid #ebe5f5;
+
+            box-shadow:
+                0 15px 40px rgba(60, 40, 100, 0.08);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding: 55px 6%;
+
+            background: #171426;
+
+            color: #d9d5e7;
+        }
+
+
+        footer .logo {
+            color: white;
+        }
+
+
+        footer p {
+            color: #aaa4bb;
+
+            line-height: 1.6;
+        }
+
+
+        footer h4 {
+            margin-top: 0;
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+
+        footer a:not(.logo) {
+            display: block;
+
+            margin: 10px 0;
+
+            color: #aaa4bb;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+
+        footer a:not(.logo):hover {
+            color: #9d7cff;
+
+            transform: translateX(3px);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1100px) {
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .site-header {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .site-header .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .toolbar {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            footer {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .page {
+                width: 94%;
+                padding-top: 35px;
+            }
+
+            .site-header nav {
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+            .site-header nav a {
+                padding: 9px 12px;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 42px;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+
+    <!-- LOGO -->
+
+    <a
+        class="logo"
+        href="../index.html">
+
+        Choice<span>Nest</span>
+
+    </a>
+
+
+    <!-- NAVIGATION BUTTONS -->
+
+    <nav class="main-nav">
+
+
+        <a
+            href="../index.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a
+            href="products.html"
+            class="active">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a
+            href="wishlist.html">
+
+            ❤️ Wishlist
+
+            <span
+                id="wishlistCount"
+                class="badge">
+
+                0
+
+            </span>
+
+        </a>
+
+
+        <a
+            href="profile.html">
+
+            👤 Profile
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- LOGIN -->
+
+    <div class="header-actions">
+
+        <a
+            id="authButton"
+            class="btn btn-primary"
+            href="login.html">
+
+            Login
+
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="page">
+
+
+    <!-- PAGE TITLE -->
+
+    <div class="page-title">
+
+        <p class="eyebrow">
+
+            DISCOVER
+
+        </p>
+
+
+        <h1>
+
+            Explore
+            <span style="color:#6d3df5;">
+                Products
+            </span>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Search, compare and discover products
+            before making your choice.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SEARCH + FILTER
+    ========================================= -->
+
+    <div class="toolbar">
+
+
+        <input
+            id="searchProducts"
+            type="text"
+            placeholder="🔍  Search products, categories...">
+
+
+        <select
+            id="categoryFilter">
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="Electronics">
+                Electronics
+            </option>
+
+            <option value="Fashion">
+                Fashion
+            </option>
+
+            <option value="Beauty">
+                Beauty
+            </option>
+
+            <option value="Home">
+                Home
+            </option>
+
+            <option value="Accessories">
+                Accessories
+            </option>
+
+            <option value="Fitness">
+                Fitness
+            </option>
+
+        </select>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         PRODUCTS
+    ========================================= -->
+
+    <div
+        id="products"
+        class="product-grid">
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <!-- BRAND -->
+
+    <div>
+
+        <a
+            class="logo"
+            href="../index.html">
+
+            Choice<span>Nest</span>
+
+        </a>
+
+
+        <p>
+
+            Your personal product discovery space.
+
+        </p>
+
+        <p>
+
+            Discover better.
+            Choose smarter.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div>
+
+        <h4>
+            Explore
+        </h4>
+
+
+        <a href="../index.html">
+            🏠 Home
+        </a>
+
+
+        <a href="products.html">
+            🛍️ Products
+        </a>
+
+
+        <a href="wishlist.html">
+            ❤️ Wishlist
+        </a>
+
+
+    </div>
+
+
+
+    <!-- ACCOUNT -->
+
+    <div>
+
+        <h4>
+            Account
+        </h4>
+
+
+        <a href="login.html">
+            🔐 Login
+        </a>
+
+
+        <a href="register.html">
+            ✨ Register
+        </a>
+
+
+        <a href="profile.html">
+            👤 Profile
+        </a>
+
+    </div>
+
+
+
+    <!-- CHOICENEST -->
+
+    <div>
+
+        <h4>
+            ChoiceNest
+        </h4>
+
+
+        <p>
+            Smart shopping made simple.
+        </p>
+
+
+        <p>
+            ❤️ Made for better choices.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="../js/app.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ===============================
+           SEARCH
+        =============================== */
+
+        const search =
+            document.getElementById(
+                "searchProducts"
+            );
+
+
+        /* ===============================
+           CATEGORY
+        =============================== */
+
+        const category =
+            document.getElementById(
+                "categoryFilter"
+            );
+
+
+        /* ===============================
+           PRODUCT CONTAINER
+        =============================== */
+
+        const container =
+            document.getElementById(
+                "products"
+            );
+
+
+        if (
+            !container ||
+            typeof PRODUCTS === "undefined"
+        ) {
+            return;
+        }
+
+
+        /* ===============================
+           RENDER PRODUCTS
+        =============================== */
+
+        function renderProducts() {
+
+
+            const searchText =
+                search.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const selectedCategory =
+                category.value;
+
+
+            const filtered =
+                PRODUCTS.filter(
+                    function (product) {
+
+
+                        const name =
+                            String(
+                                product.name || ""
+                            ).toLowerCase();
+
+
+                        const productCategory =
+                            String(
+                                product.category || ""
+                            );
+
+
+                        const matchesSearch =
+                            name.includes(
+                                searchText
+                            ) ||
+                            productCategory
+                                .toLowerCase()
+                                .includes(
+                                    searchText
+                                );
+
+
+                        const matchesCategory =
+                            selectedCategory ===
+                            "all" ||
+                            productCategory ===
+                            selectedCategory;
+
+
+                        return (
+                            matchesSearch &&
+                            matchesCategory
+                        );
+
+                    }
+                );
+
+
+            /* EMPTY */
+
+            if (!filtered.length) {
+
+                container.innerHTML = `
+
+                    <div
+                        class="empty"
+                        style="grid-column:1/-1;">
+
+                        <div
+                            style="
+                                font-size:55px;
+                                margin-bottom:15px;
+                            ">
+
+                            🔍
+
+                        </div>
+
+
+                        <h3>
+                            No products found
+                        </h3>
+
+
+                        <p>
+                            Try another search
+                            or category.
+                        </p>
+
+                    </div>
+
+                `;
+
+                return;
+            }
+
+
+            /* PRODUCTS */
+
+            if (
+                typeof productCard ===
+                "function"
+            ) {
+
+                container.innerHTML =
+                    filtered
+                        .map(productCard)
+                        .join("");
+
+            }
+
+        }
+
+
+        /* ===============================
+           EVENTS
+        =============================== */
+
+        search.addEventListener(
+            "input",
+            renderProducts
+        );
+
+
+        category.addEventListener(
+            "change",
+            renderProducts
+        );
+
+
+        /* ===============================
+           INITIAL LOAD
+        =============================== */
+
+        renderProducts();
+
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

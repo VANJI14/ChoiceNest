@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist | ChoiceNest</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family:
+                Inter,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(108, 77, 246, 0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(171, 125, 255, 0.10),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f8f6ff 45%,
+                    #f3f0ff 100%
+                );
+
+            min-height: 100vh;
+
+            color: #171426;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .site-header {
+            min-height: 78px;
+
+            padding: 14px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.92);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid #e9e3f5;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+            text-decoration: none;
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+
+            color: #171426;
+
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #6c3cff;
+        }
+
+
+        /* =========================================
+           NAVIGATION BUTTONS
+        ========================================= */
+
+        .site-header nav {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .site-header nav a {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 42px;
+
+            padding: 10px 17px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            color: #555064;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            border: 1px solid transparent;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        /* =========================================
+           NAVIGATION HOVER
+        ========================================= */
+
+        .site-header nav a:hover {
+
+            background: #f0eaff;
+
+            color: #6337e8;
+
+            border-color: #e0d5ff;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 6px 15px
+                rgba(108, 61, 245, 0.12);
+        }
+
+
+        /* =========================================
+           ACTIVE WISHLIST BUTTON
+        ========================================= */
+
+        .site-header nav a.active {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3df5,
+                    #8b5cf6
+                );
+
+            border-color: transparent;
+
+            box-shadow:
+                0 8px 20px
+                rgba(108, 61, 245, 0.25);
+        }
+
+
+        /* =========================================
+           ACTIVE BUTTON HOVER
+        ========================================= */
+
+        .site-header nav a.active:hover {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #5d2de0,
+                    #7c45f5
+                );
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 24px
+                rgba(108, 61, 245, 0.32);
+        }
+
+
+        /* =========================================
+           WISHLIST BADGE
+        ========================================= */
+
+        .badge {
+
+            min-width: 20px;
+
+            height: 20px;
+
+            margin-left: 6px;
+
+            padding: 0 5px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50px;
+
+            background: #ff4d78;
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           HEADER LOGIN
+        ========================================= */
+
+        .header-actions {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 11px 20px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            border: none;
+
+            transition: 0.25s ease;
+        }
+
+
+        .btn-primary {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d3df5,
+                    #8b5cf6
+                );
+
+            box-shadow:
+                0 10px 22px
+                rgba(108, 61, 245, 0.25);
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(108, 61, 245, 0.32);
+        }
+
+
+        .btn-outline {
+
+            background: white;
+
+            color: #6337e8;
+
+            border:
+                1px solid #dcd2f7;
+        }
+
+
+        .btn-outline:hover {
+
+            background: #f4efff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           WISHLIST PAGE
+        ========================================= */
+
+        .wishlist-page {
+
+            min-height:
+                calc(100vh - 78px);
+
+            padding:
+                65px 7% 90px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+           DECORATIVE BACKGROUND
+        ========================================= */
+
+        .wishlist-page::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 320px;
+
+            height: 320px;
+
+            background:
+                rgba(108, 77, 246, 0.08);
+
+            border-radius: 50%;
+
+            top: -120px;
+
+            right: -100px;
+
+            filter: blur(5px);
+
+            pointer-events: none;
+        }
+
+
+        .wishlist-page::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            background:
+                rgba(155, 119, 255, 0.08);
+
+            border-radius: 50%;
+
+            bottom: -100px;
+
+            left: -100px;
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================
+           TITLE
+        ========================================= */
+
+        .wishlist-heading {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 38px;
+        }
+
+
+        .eyebrow {
+
+            margin:
+                0 0 12px;
+
+            color: #7044ef;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .wishlist-heading h1 {
+
+            margin: 0 0 8px;
+
+            font-size:
+                clamp(40px, 5vw, 56px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            font-weight: 900;
+        }
+
+
+        .wishlist-heading h1 span {
+
+            color: #6d3df5;
+        }
+
+
+        .wishlist-description {
+
+            color: #716e80;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+        /* =========================================
+           PRODUCT CONTAINER
+        ========================================= */
+
+        #wishlistProducts {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .product-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        /* =========================================
+           PRODUCT CARD
+        ========================================= */
+
+        #wishlistProducts .product-card {
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            box-shadow:
+                0 8px 30px
+                rgba(45, 35, 100, 0.07);
+        }
+
+
+        #wishlistProducts .product-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(70, 50, 150, 0.15);
+        }
+
+
+        /* =========================================
+           EMPTY WISHLIST
+        ========================================= */
+
+        .wishlist-empty {
+
+            grid-column: 1 / -1;
+
+            min-height: 420px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.95),
+                    rgba(246,243,255,0.95)
+                );
+
+            border:
+                1px solid
+                rgba(108,77,246,0.12);
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(54, 38, 120, 0.08);
+
+            padding: 40px;
+        }
+
+
+        .wishlist-empty-icon {
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eee9ff,
+                    #ffffff
+                );
+
+            font-size: 45px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 12px 30px
+                rgba(108,77,246,0.12);
+        }
+
+
+        .wishlist-empty h3 {
+
+            font-size: 25px;
+
+            margin:
+                0 0 8px;
+        }
+
+
+        .wishlist-empty p {
+
+            color: #716e80;
+
+            margin:
+                0 0 22px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding:
+                55px 6%;
+
+            background: #171426;
+
+            color: #d9d5e7;
+        }
+
+
+        footer .logo {
+
+            color: white;
+        }
+
+
+        footer p {
+
+            color: #aaa4bb;
+
+            line-height: 1.6;
+        }
+
+
+        footer h4 {
+
+            margin-top: 0;
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+
+        footer a:not(.logo) {
+
+            display: block;
+
+            margin: 10px 0;
+
+            color: #aaa4bb;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+
+        footer a:not(.logo):hover {
+
+            color: #9d7cff;
+
+            transform:
+                translateX(3px);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1100px) {
+
+            .product-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+        }
+
+
+        @media (max-width: 850px) {
+
+            .site-header {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .site-header .logo {
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            .site-header nav {
+
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+
+            .header-actions {
+
+                width: 100%;
+
+                justify-content: center;
+            }
+
+
+            .product-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            footer {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .wishlist-page {
+
+                padding:
+                    45px 5% 60px;
+            }
+
+
+            .site-header nav a {
+
+                padding:
+                    9px 12px;
+            }
+
+
+            .product-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .wishlist-heading h1 {
+
+                font-size: 38px;
+            }
+
+
+            .wishlist-description {
+
+                font-size: 14px;
+            }
+
+
+            .wishlist-empty {
+
+                min-height: 350px;
+
+                padding: 25px;
+            }
+
+
+            footer {
+
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+
+    <!-- LOGO -->
+
+    <a
+        class="logo"
+        href="../index.html">
+
+        Choice<span>Nest</span>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+
+        <a
+            href="../index.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a
+            href="products.html">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a
+            href="wishlist.html"
+            class="active">
+
+            ❤️ Wishlist
+
+            <span
+                id="wishlistCount"
+                class="badge">
+
+                0
+
+            </span>
+
+        </a>
+
+
+        <a
+            href="profile.html">
+
+            👤 Profile
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- LOGIN -->
+
+    <div class="header-actions">
+
+        <a
+            id="authButton"
+            class="btn btn-primary"
+            href="login.html">
+
+            Login
+
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="wishlist-page">
+
+
+    <!-- TITLE -->
+
+    <div class="wishlist-heading">
+
+
+        <p class="eyebrow">
+
+            YOUR COLLECTION
+
+        </p>
+
+
+        <h1>
+
+            My Wishlist
+            <span>♥</span>
+
+        </h1>
+
+
+        <p class="wishlist-description">
+
+            Products you've saved for later.
+            Keep your favourite choices in one place.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- WISHLIST PRODUCTS -->
+
+    <div
+        id="wishlistProducts"
+        class="product-grid">
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <!-- BRAND -->
+
+    <div>
+
+        <a
+            class="logo"
+            href="../index.html">
+
+            Choice<span>Nest</span>
+
+        </a>
+
+
+        <p>
+
+            Your personal product discovery space.
+
+        </p>
+
+
+        <p>
+
+            Discover better.
+            Choose smarter.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div>
+
+        <h4>
+            Explore
+        </h4>
+
+
+        <a href="../index.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a href="products.html">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a href="wishlist.html">
+
+            ❤️ Wishlist
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ACCOUNT -->
+
+    <div>
+
+        <h4>
+            Account
+        </h4>
+
+
+        <a href="login.html">
+
+            🔐 Login
+
+        </a>
+
+
+        <a href="register.html">
+
+            ✨ Register
+
+        </a>
+
+
+        <a href="profile.html">
+
+            👤 Profile
+
+        </a>
+
+    </div>
+
+
+
+    <!-- CHOICENEST -->
+
+    <div>
+
+        <h4>
+            ChoiceNest
+        </h4>
+
+
+        <p>
+
+            Smart shopping made simple.
+
+        </p>
+
+
+        <p>
+
+            ❤️ Made for better choices.
+
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================
+     APP JS
+========================================= -->
+
+<script src="../js/app.js"></script>
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           CONTAINER
+        ===================================== */
+
+        const container =
+            document.getElementById(
+                "wishlistProducts"
+            );
+
+
+        if (!container) {
+
+            return;
+
+        }
+
+
+        /* =====================================
+           GET WISHLIST
+        ===================================== */
+
+        const wishlist =
+            typeof getWishlist === "function"
+                ? getWishlist()
+                : [];
+
+
+        /* =====================================
+           FIND PRODUCTS
+        ===================================== */
+
+        const products =
+            typeof PRODUCTS !== "undefined"
+                ? PRODUCTS.filter(
+                    function (product) {
+
+                        return wishlist.includes(
+                            product.id
+                        );
+
+                    }
+                )
+                : [];
+
+
+        /* =====================================
+           EMPTY WISHLIST
+        ===================================== */
+
+        if (!products.length) {
+
+
+            container.innerHTML = `
+
+                <div
+                    class="wishlist-empty">
+
+
+                    <div
+                        class="wishlist-empty-icon">
+
+                        ♡
+
+                    </div>
+
+
+                    <h3>
+
+                        Your wishlist is empty
+
+                    </h3>
+
+
+                    <p>
+
+                        Save products you love
+                        and find them here later.
+
+                    </p>
+
+
+                    <a
+                        href="products.html"
+                        class="btn btn-primary">
+
+                        Explore Products →
+
+                    </a>
+
+
+                </div>
+
+            `;
+
+
+            if (
+                typeof updateHeader ===
+                "function"
+            ) {
+
+                updateHeader();
+
+            }
+
+
+            return;
+
+        }
+
+
+        /* =====================================
+           DISPLAY PRODUCTS
+        ===================================== */
+
+        if (
+            typeof productCard ===
+            "function"
+        ) {
+
+            container.innerHTML =
+                products
+                    .map(productCard)
+                    .join("");
+
+        }
+
+
+        /* =====================================
+           UPDATE HEADER
+        ===================================== */
+
+        if (
+            typeof updateHeader ===
+            "function"
+        ) {
+
+            updateHeader();
+
+        }
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

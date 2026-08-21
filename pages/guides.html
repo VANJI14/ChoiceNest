@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Buying Guides | ChoiceNest</title>
+
+    <meta name="description"
+          content="ChoiceNest buying guides help you discover, compare and choose the right products with confidence.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #282038;
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8fc,
+                    #f7f4ff 45%,
+                    #f2faff
+                );
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,.94);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid #eee7f5;
+
+            box-shadow:
+                0 8px 30px rgba(75,50,120,.06);
+        }
+
+        .header-main {
+            max-width: 1250px;
+
+            margin: auto;
+
+            min-height: 74px;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            font-size: 23px;
+
+            font-weight: 900;
+
+            white-space: nowrap;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff8da8,
+                    #7651eb
+                );
+
+            box-shadow:
+                0 8px 18px rgba(118,81,235,.2);
+        }
+
+        .logo-choice {
+            color: #2e2640;
+        }
+
+        .logo-nest {
+            color: #7651eb;
+        }
+
+        .header-nav {
+            margin-left: auto;
+
+            display: flex;
+
+            gap: 24px;
+        }
+
+        .header-nav a {
+            color: #655b70;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: .2s;
+        }
+
+        .header-nav a:hover {
+            color: #7651eb;
+        }
+
+        .header-back {
+            padding: 10px 17px;
+
+            border-radius: 13px;
+
+            color: white !important;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #ff8da8,
+                    #7651eb
+                );
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .guide-hero {
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 70px 25px 50px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            border-radius: 30px;
+
+            background: white;
+
+            color: #7651eb;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 8px 25px rgba(80,50,120,.08);
+        }
+
+        .guide-hero h1 {
+            margin-top: 20px;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2.5px;
+        }
+
+        .guide-hero h1 span {
+            color: #7651eb;
+        }
+
+        .guide-hero p {
+            margin-top: 20px;
+
+            max-width: 600px;
+
+            color: #756b80;
+
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            margin-top: 28px;
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            border: 0;
+
+            padding: 14px 20px;
+
+            border-radius: 15px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: .25s;
+        }
+
+        .primary-btn {
+            color: white;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #ff8da8,
+                    #7651eb
+                );
+
+            box-shadow:
+                0 12px 25px rgba(118,81,235,.2);
+        }
+
+        .secondary-btn {
+            background: white;
+
+            color: #5d5270;
+
+            box-shadow:
+                0 8px 22px rgba(80,50,120,.08);
+        }
+
+        .primary-btn:hover,
+        .secondary-btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+            position: relative;
+
+            border-radius: 35px;
+
+            overflow: hidden;
+
+            min-height: 390px;
+
+            box-shadow:
+                20px 30px 60px rgba(70,50,120,.16);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 390px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+
+            right: 20px;
+            bottom: 20px;
+
+            padding: 16px 20px;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,.93);
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 15px 35px rgba(60,40,100,.15);
+        }
+
+        .hero-floating-card strong {
+            display: block;
+
+            font-size: 20px;
+
+            color: #7651eb;
+        }
+
+        .hero-floating-card span {
+            color: #756b80;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           QUICK STEPS
+        ===================================================== */
+
+        .quick-steps {
+            max-width: 1200px;
+
+            margin: 10px auto 70px;
+
+            padding: 0 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 16px;
+        }
+
+        .step-card {
+            padding: 22px;
+
+            background: rgba(255,255,255,.85);
+
+            border-radius: 22px;
+
+            border:
+                1px solid #eee7f5;
+
+            box-shadow:
+                0 12px 30px rgba(70,50,100,.06);
+
+            transition: .25s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 35px rgba(70,50,100,.1);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 13px;
+
+            color: white;
+
+            font-weight: 900;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff8da8,
+                    #7651eb
+                );
+
+            margin-bottom: 12px;
+        }
+
+        .step-card h3 {
+            font-size: 16px;
+        }
+
+        .step-card p {
+            margin-top: 5px;
+
+            color: #81778c;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .content {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 0 25px 80px;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .section-heading span {
+            color: #7651eb;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+        }
+
+        .section-heading h2 {
+            margin-top: 7px;
+
+            font-size: 35px;
+
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+
+            margin: 10px auto;
+
+            color: #81778c;
+        }
+
+
+        /* =====================================================
+           GUIDE CARDS
+        ===================================================== */
+
+        .guide-card {
+            margin-bottom: 35px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #eee8f5;
+
+            box-shadow:
+                0 20px 50px rgba(70,50,110,.08);
+        }
+
+        .guide-card-top {
+            display: grid;
+
+            grid-template-columns: 320px 1fr;
+        }
+
+        .guide-image {
+            min-height: 280px;
+
+            overflow: hidden;
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 280px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: .5s;
+        }
+
+        .guide-card:hover .guide-image img {
+            transform: scale(1.05);
+        }
+
+        .guide-content {
+            padding: 35px;
+        }
+
+        .guide-category {
+            display: inline-block;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            background: #f1ebff;
+
+            color: #7651eb;
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+        .guide-content h2 {
+            margin-top: 12px;
+
+            font-size: 27px;
+        }
+
+        .guide-content > p {
+            margin-top: 10px;
+
+            color: #756b80;
+
+            font-size: 14px;
+        }
+
+        .check-grid {
+            margin-top: 20px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 10px;
+        }
+
+        .check-item {
+            display: flex;
+
+            gap: 9px;
+
+            align-items: center;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #4e4559;
+        }
+
+        .check-item i {
+            color: #28b879;
+        }
+
+        .avoid-box {
+            margin-top: 20px;
+
+            padding: 16px;
+
+            border-radius: 16px;
+
+            background: #fff5f6;
+
+            border-left:
+                4px solid #ff7188;
+        }
+
+        .avoid-box strong {
+            color: #d94d65;
+        }
+
+        .avoid-box p {
+            margin-top: 4px;
+
+            color: #756b80;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           USAGE TABLE
+        ===================================================== */
+
+        .usage-section {
+            margin: 55px 0;
+        }
+
+        .usage-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(70,50,110,.07);
+        }
+
+        .usage-table th,
+        .usage-table td {
+            padding: 16px;
+
+            text-align: left;
+
+            border-bottom:
+                1px solid #eee8f5;
+        }
+
+        .usage-table th {
+            color: white;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #7651eb,
+                    #9b7cf4
+                );
+
+            font-size: 13px;
+        }
+
+        .usage-table td {
+            font-size: 13px;
+
+            color: #5e5468;
+        }
+
+        .usage-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+
+        /* =====================================================
+           OTHER CATEGORIES
+        ===================================================== */
+
+        .category-guides {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 18px;
+
+            margin-bottom: 70px;
+        }
+
+        .category-guide {
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 12px 30px rgba(70,50,110,.07);
+
+            transition: .25s;
+        }
+
+        .category-guide:hover {
+            transform: translateY(-6px);
+        }
+
+        .category-guide-image {
+            height: 150px;
+
+            overflow: hidden;
+        }
+
+        .category-guide-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .category-guide-content {
+            padding: 18px;
+        }
+
+        .category-guide h3 {
+            font-size: 17px;
+        }
+
+        .category-guide p {
+            margin-top: 5px;
+
+            color: #81778c;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           SMART CHOICE SCORE
+        ===================================================== */
+
+        .score-section {
+            padding: 50px 35px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eee6ff,
+                    #fff1f7,
+                    #eaf8ff
+                );
+
+            margin-bottom: 70px;
+        }
+
+        .score-section h2 {
+            text-align: center;
+
+            font-size: 32px;
+        }
+
+        .score-section > p {
+            text-align: center;
+
+            color: #756b80;
+
+            margin: 8px auto 30px;
+
+            max-width: 650px;
+        }
+
+        .scores {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5,1fr);
+
+            gap: 15px;
+        }
+
+        .score {
+            background: rgba(255,255,255,.8);
+
+            border-radius: 18px;
+
+            padding: 18px;
+
+            text-align: center;
+        }
+
+        .score-icon {
+            font-size: 25px;
+        }
+
+        .score strong {
+            display: block;
+
+            margin-top: 8px;
+
+            font-size: 13px;
+        }
+
+        .stars {
+            margin-top: 5px;
+
+            color: #ffb52e;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           BEFORE YOU BUY
+        ===================================================== */
+
+        .checklist {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 12px;
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .checklist-item {
+            background: white;
+
+            padding: 17px 20px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 22px rgba(70,50,100,.06);
+
+            display: flex;
+
+            gap: 12px;
+
+            align-items: center;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+        .checklist-item i {
+            color: #7651eb;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            margin-top: 40px;
+
+            background: #241d34;
+
+            color: white;
+
+            padding: 45px 25px 25px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-inner p {
+            color: #bdb5c9;
+
+            font-size: 13px;
+
+            max-width: 400px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 22px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #d8d1e2;
+
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+
+            margin: 30px auto 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255,255,255,.1);
+
+            color: #aaa2b7;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:950px) {
+
+            .guide-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                max-width: 700px;
+
+                width: 100%;
+
+                margin: auto;
+            }
+
+            .quick-steps {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .category-guides {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .scores {
+                grid-template-columns:
+                    repeat(3,1fr);
+            }
+
+            .header-nav {
+                display: none;
+            }
+        }
+
+
+        @media(max-width:650px) {
+
+            .header-main {
+                min-height: 65px;
+
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .guide-hero {
+                padding-top: 40px;
+            }
+
+            .guide-hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-image,
+            .hero-image img {
+                min-height: 270px;
+            }
+
+            .quick-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-card-top {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-image,
+            .guide-image img {
+                min-height: 220px;
+            }
+
+            .guide-content {
+                padding: 24px;
+            }
+
+            .check-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-guides {
+                grid-template-columns: 1fr;
+            }
+
+            .scores {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .checklist {
+                grid-template-columns: 1fr;
+            }
+
+            .usage-table {
+                display: block;
+
+                overflow-x: auto;
+            }
+
+            .section-heading h2,
+            .score-section h2 {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-main">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </span>
+
+            <span class="logo-choice">Choice</span><span class="logo-nest">Nest</span>
+
+        </a>
+
+
+        <nav class="header-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+
+            <a href="#guides">
+                Guides
+            </a>
+
+            <a href="../index.html#deals">
+                Deals
+            </a>
+
+        </nav>
+
+
+        <a href="../index.html"
+           class="header-back">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to ChoiceNest
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="guide-hero">
+
+
+    <div>
+
+        <div class="hero-badge">
+
+            <span>✨</span>
+
+            CHOICENEST BUYING GUIDES
+
+        </div>
+
+
+        <h1>
+
+            Shop smarter.
+
+            <br>
+
+            Choose with
+            <span>confidence.</span>
+
+        </h1>
+
+
+        <p>
+
+            Confused about what to buy?
+
+            Our simple buying guidelines help you
+            understand what really matters, compare
+            your options and avoid common shopping
+            mistakes.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#guides"
+               class="primary-btn">
+
+                Explore Guides
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+
+            <a href="#checklist"
+               class="secondary-btn">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Before You Buy
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://guidejournal.in/uploads/images/202601/image_750x_695d150892c16.jpg"
+            alt="ChoiceNest buying guide">
+
+        <div class="hero-floating-card">
+
+            <strong>
+                8+
+            </strong>
+
+            <span>
+                Smart buying checks
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     4 STEP PROCESS
+===================================================== -->
+
+<section class="quick-steps">
+
+
+    <div class="step-card">
+
+        <div class="step-number">
+            01
+        </div>
+
+        <h3>
+            Know Your Need
+        </h3>
+
+        <p>
+            Decide what you actually need the
+            product for.
+        </p>
+
+    </div>
+
+
+    <div class="step-card">
+
+        <div class="step-number">
+            02
+        </div>
+
+        <h3>
+            Set Your Budget
+        </h3>
+
+        <p>
+            Choose a realistic spending range
+            before shopping.
+        </p>
+
+    </div>
+
+
+    <div class="step-card">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <h3>
+            Compare
+        </h3>
+
+        <p>
+            Compare specifications, prices,
+            reviews and alternatives.
+        </p>
+
+    </div>
+
+
+    <div class="step-card">
+
+        <div class="step-number">
+            04
+        </div>
+
+        <h3>
+            Buy Smart
+        </h3>
+
+        <p>
+            Check warranty, returns and the
+            final price before paying.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="content"
+      id="guides">
+
+
+    <div class="section-heading">
+
+        <span>
+            OUR GUIDELINES
+        </span>
+
+        <h2>
+            Find the right product for you
+        </h2>
+
+        <p>
+            Use these simple checklists to make
+            better buying decisions.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SMARTPHONE
+    ================================================== -->
+
+    <article class="guide-card">
+
+        <div class="guide-card-top">
+
+
+            <div class="guide-image">
+
+                <img
+                    src="https://s.alicdn.com/%40sc02/kf/H7677f2fb23334ef4909b562ba6efad27l.jpg"
+                    alt="Smartphone buying guide">
+
+            </div>
+
+
+            <div class="guide-content">
+
+                <span class="guide-category">
+                    📱 ELECTRONICS
+                </span>
+
+                <h2>
+                    Smartphone Buying Guide
+                </h2>
+
+                <p>
+                    Don't buy a phone just because it has
+                    a huge megapixel number or flashy
+                    specifications. Focus on what you will
+                    actually use every day.
+                </p>
+
+
+                <div class="check-grid">
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Budget
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Processor
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Display
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Camera
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Battery
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        RAM & Storage
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        5G & Connectivity
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Software Updates
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Build Quality
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Warranty
+                    </div>
+
+                </div>
+
+
+                <div class="avoid-box">
+
+                    <strong>
+                        ⚠️ Avoid these mistakes
+                    </strong>
+
+                    <p>
+                        Don't buy only because of megapixel
+                        numbers, RAM marketing or a huge
+                        discount. Compare real-world
+                        performance, battery and software
+                        support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         LAPTOP
+    ================================================== -->
+
+    <article class="guide-card">
+
+        <div class="guide-card-top">
+
+
+            <div class="guide-image">
+
+                <img
+                    src="https://www.soundstore.ie/media/wysiwyg/Click_Collect_1_.png"
+                    alt="Laptop and technology buying guide">
+
+            </div>
+
+
+            <div class="guide-content">
+
+                <span class="guide-category">
+                    💻 TECHNOLOGY
+                </span>
+
+                <h2>
+                    Laptop Buying Guide
+                </h2>
+
+                <p>
+                    Choose your laptop based on what you
+                    actually plan to do with it — studying,
+                    office work, programming, editing or
+                    gaming.
+                </p>
+
+
+                <div class="check-grid">
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Purpose
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Processor
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        RAM
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        SSD Storage
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Display
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Graphics
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Battery Life
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Weight
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Ports
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Warranty
+                    </div>
+
+                </div>
+
+
+                <div class="avoid-box">
+
+                    <strong>
+                        🎓 Student Tip
+                    </strong>
+
+                    <p>
+                        If you mainly need browsing, coding,
+                        Office and college work, don't pay
+                        extra for a powerful gaming GPU that
+                        you won't use.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         HEADPHONES
+    ================================================== -->
+
+    <article class="guide-card">
+
+        <div class="guide-card-top">
+
+
+            <div class="guide-image">
+
+                <img
+                    src="https://rethink-cafe.com/cdn/shop/articles/best-noise-cancelling-headphones-2026.jpg"
+                    alt="Headphone buying guide"
+                    onerror="this.src='https://guidejournal.in/uploads/images/202601/image_750x_695d150892c16.jpg'">
+
+            </div>
+
+
+            <div class="guide-content">
+
+                <span class="guide-category">
+                    🎧 AUDIO
+                </span>
+
+                <h2>
+                    Headphone Buying Guide
+                </h2>
+
+                <p>
+                    Choose headphones according to your
+                    listening environment, comfort needs
+                    and budget.
+                </p>
+
+
+                <div class="check-grid">
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Sound Quality
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        ANC
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Battery
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Microphone
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Bluetooth
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Comfort
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Water Resistance
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fa-solid fa-check"></i>
+                        Multipoint
+                    </div>
+
+                </div>
+
+
+                <div class="avoid-box">
+
+                    <strong>
+                        🎵 Choose based on usage
+                    </strong>
+
+                    <p>
+                        Travel → ANC &nbsp; | &nbsp;
+                        Classes → Mic & Comfort &nbsp; | &nbsp;
+                        Gaming → Low Latency &nbsp; | &nbsp;
+                        Office → Mic & Multipoint
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         USAGE TABLE
+    ================================================== -->
+
+    <section class="usage-section">
+
+        <div class="section-heading">
+
+            <span>
+                QUICK DECISION
+            </span>
+
+            <h2>
+                What are you buying it for?
+            </h2>
+
+        </div>
+
+
+        <table class="usage-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Usage
+                    </th>
+
+                    <th>
+                        What matters most
+                    </th>
+
+                    <th>
+                        Don't overpay for
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+                    <td>🎓 Online Classes</td>
+                    <td>Comfort, battery, microphone</td>
+                    <td>Premium gaming features</td>
+                </tr>
+
+                <tr>
+                    <td>💼 Office Work</td>
+                    <td>Reliability, battery, webcam</td>
+                    <td>High-end GPU</td>
+                </tr>
+
+                <tr>
+                    <td>💻 Programming</td>
+                    <td>Processor, RAM, keyboard</td>
+                    <td>Gaming RGB</td>
+                </tr>
+
+                <tr>
+                    <td>🎮 Gaming</td>
+                    <td>GPU, cooling, display refresh rate</td>
+                    <td>Ultra-thin design</td>
+                </tr>
+
+                <tr>
+                    <td>✈️ Travel</td>
+                    <td>Battery, weight, ANC</td>
+                    <td>Unnecessary accessories</td>
+                </tr>
+
+                <tr>
+                    <td>🎵 Music</td>
+                    <td>Sound quality, comfort, codec support</td>
+                    <td>Features you never use</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OTHER CATEGORIES
+    ================================================== -->
+
+    <div class="section-heading">
+
+        <span>
+            MORE GUIDES
+        </span>
+
+        <h2>
+            More things to consider
+        </h2>
+
+    </div>
+
+
+    <section class="category-guides">
+
+
+        <article class="category-guide">
+
+            <div class="category-guide-image">
+
+                <img
+                    src="https://s.alicdn.com/%40sc02/kf/Aad6a215d6d234484bf3fc998d492055fx.jpg"
+                    alt="Home appliances">
+
+            </div>
+
+            <div class="category-guide-content">
+
+                <h3>
+                    🏠 Home & Kitchen
+                </h3>
+
+                <p>
+                    Check energy efficiency, dimensions,
+                    warranty, installation and service.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="category-guide">
+
+            <div class="category-guide-image">
+
+                <img
+                    src="https://ali-shop.net/uk/wp-content/uploads/2025/04/tovary-1-20-uah-aliexpress.webp"
+                    alt="Smartwatch and accessories">
+
+            </div>
+
+            <div class="category-guide-content">
+
+                <h3>
+                    ⌚ Smartwatches
+                </h3>
+
+                <p>
+                    Compare GPS, health features,
+                    battery, compatibility and display.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="category-guide">
+
+            <div class="category-guide-image">
+
+                <img
+                    src="https://guidejournal.in/uploads/images/202601/image_750x_695d150892c16.jpg"
+                    alt="Fashion buying guide">
+
+            </div>
+
+            <div class="category-guide-content">
+
+                <h3>
+                    👟 Fashion
+                </h3>
+
+                <p>
+                    Check size, material, fit, reviews
+                    and return policy.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="category-guide">
+
+            <div class="category-guide-image">
+
+                <img
+                    src="https://ali-shop.net/uk/wp-content/uploads/2025/04/tovary-1-20-uah-aliexpress.webp"
+                    alt="Gaming accessories">
+
+            </div>
+
+            <div class="category-guide-content">
+
+                <h3>
+                    🎮 Gaming
+                </h3>
+
+                <p>
+                    Check performance, latency,
+                    compatibility and cooling.
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PRICE COMPARISON
+    ================================================== -->
+
+    <section class="score-section">
+
+        <h2>
+            💰 ChoiceNest Price Comparison Rule
+        </h2>
+
+        <p>
+            The lowest displayed price isn't always
+            the best deal. Check the complete purchase
+            value before clicking Buy.
+        </p>
+
+
+        <div class="check-grid"
+             style="max-width:800px;margin:auto;">
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Compare at least 2–3 stores
+            </div>
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Check delivery charges
+            </div>
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Apply available coupons
+            </div>
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Check bank offers
+            </div>
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Check final checkout price
+            </div>
+
+            <div class="check-item">
+                <i class="fa-solid fa-check"></i>
+                Compare warranty
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SMART CHOICE SCORE
+    ================================================== -->
+
+    <section class="score-section">
+
+        <h2>
+            ⭐ ChoiceNest Smart Choice Score
+        </h2>
+
+        <p>
+            Use these five factors to quickly judge
+            whether a product is worth considering.
+        </p>
+
+
+        <div class="scores">
+
+
+            <div class="score">
+
+                <div class="score-icon">
+                    💰
+                </div>
+
+                <strong>
+                    Value for Money
+                </strong>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-icon">
+                    ⚡
+                </div>
+
+                <strong>
+                    Performance
+                </strong>
+
+                <div class="stars">
+                    ★★★★☆
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-icon">
+                    🔋
+                </div>
+
+                <strong>
+                    Battery
+                </strong>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-icon">
+                    ⭐
+                </div>
+
+                <strong>
+                    Reliability
+                </strong>
+
+                <div class="stars">
+                    ★★★★☆
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-icon">
+                    🛠️
+                </div>
+
+                <strong>
+                    After-Sales
+                </strong>
+
+                <div class="stars">
+                    ★★★★☆
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BEFORE YOU BUY
+    ================================================== -->
+
+    <section id="checklist">
+
+        <div class="section-heading">
+
+            <span>
+                FINAL CHECK
+            </span>
+
+            <h2>
+                Before You Buy
+            </h2>
+
+            <p>
+                Run through this checklist before
+                placing your order.
+            </p>
+
+        </div>
+
+
+        <div class="checklist">
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Is this product suitable for my needs?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Is the price reasonable?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I compare prices?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I check the final price?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I read customer reviews?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I check the warranty?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I check the return policy?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Did I compare alternatives?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Am I buying because I need it?
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Am I being influenced only by a discount?
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </span>
+
+                <span style="color:white;">
+                    Choice
+                </span>
+
+                <span class="logo-nest">
+                    Nest
+                </span>
+
+            </div>
+
+            <p style="margin-top:12px;">
+
+                Discover better products.
+                Compare smarter.
+                Choose with confidence.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+            <a href="login.html">
+                Account
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 ChoiceNest. All rights reserved.
+
+        <span style="float:right;">
+            Discover. Compare. Choose.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    /*
+     * Smooth scroll for guide buttons
+     */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(link => {
+
+            link.addEventListener("click", function(e) {
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+                if(target) {
+
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+
+            });
+
+        });
+
+
+    /*
+     * Add small reveal animation
+     */
+
+    const cards =
+        document.querySelectorAll(
+            ".guide-card, .category-guide, .step-card"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if(entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: .12
+            }
+        );
+
+
+    cards.forEach(card => {
+
+        card.style.opacity = "0";
+
+        card.style.transform =
+            "translateY(25px)";
+
+        card.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        observer.observe(card);
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
